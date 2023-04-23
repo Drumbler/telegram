@@ -18,7 +18,7 @@ public class TestBot extends TelegramLongPollingBot {
             Message message = update.getMessage();
             if (message.hasText()){
                 try {
-                    execute(SendMessage.builder().chatId(message.getChatId().toString()).text("гыга").build());
+                    execute(SendMessage.builder().chatId(message.getChatId().toString()).text("гыг").build());
                 } catch (TelegramApiException e) {
                     throw new RuntimeException(e);
                 }
