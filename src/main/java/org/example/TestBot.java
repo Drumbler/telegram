@@ -15,7 +15,7 @@ public class TestBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         if (update.hasMessage()){
-            Message message = update.getMessage();
+            handleMessage(Message message = update.getMessage());
             if (message.hasText()){
                 try {
                     execute(SendMessage.builder().chatId(message.getChatId().toString()).text("гыга").build());
@@ -23,6 +23,15 @@ public class TestBot extends TelegramLongPollingBot {
                     throw new RuntimeException(e);
                 }
             }
+        }
+    }
+    private void handleMessage(Message message) {
+        if (message.hasText() && message.hasEntities()) {
+            message.getEntities().stream().filter(e -> "bot_command".equals(e.getType())).findFirst();
+            if (commandEntity.isPresent()) {
+            }
+
+
         }
     }
 
