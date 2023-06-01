@@ -41,5 +41,4 @@ public class TestBot extends TelegramLongPollingBot {
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
         telegramBotsApi.registerBot(testBot);
     }
-
 }
