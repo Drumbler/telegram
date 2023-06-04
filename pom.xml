@@ -19,5 +19,10 @@
         <artifactId>telegrambots</artifactId>
         <version> 6.5.0 </version>
     </dependency>
-    </dependencies>у
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20180813</version>
+        </dependency>
+    </dependencies>
 </project>
