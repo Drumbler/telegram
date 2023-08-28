@@ -33,7 +33,7 @@ public class TestBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken(){
-        return "5718084324:AAEblt3PXVm3sq-7v5dftQcKeXqX-TRQuyA";
+        return "";
     }
 
     public static void main(String[] args) throws TelegramApiException {
